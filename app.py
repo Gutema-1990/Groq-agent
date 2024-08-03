@@ -178,7 +178,13 @@ with st.sidebar:
         new_cycles = st.number_input(
             "Number of Layers",
             min_value=1,
-            max_value=10,
+            max_value=10,   # st.markdown("---")
+    # st.markdown("""
+    # ### Credits
+    # - MOA: [Together AI](https://www.together.ai/blog/together-moa)
+    # - LLMs: [Groq](https://groq.com/)
+    # - Paper: [arXiv:2406.04692](https://arxiv.org/abs/2406.04692)
+    # """)
             value=st.session_state.cycles
         )
 
@@ -231,7 +237,7 @@ with st.sidebar:
 # Main app layout
 st.header("Mixture of Agents", anchor=False)
 st.write("A demo of the Mixture of Agents architecture proposed by Together AI, Powered by Groq LLMs.")
-st.image("./static/moa_groq.svg", caption="Mixture of Agents Workflow", width=1000)
+# st.image("./static/moa_groq.svg", caption="Mixture of Agents Workflow", width=1000)
 
 # Display current configuration
 with st.expander("Current MOA Configuration", expanded=False):
