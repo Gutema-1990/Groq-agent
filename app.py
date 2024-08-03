@@ -127,18 +127,18 @@ def set_moa_agent(
     del layer_agent_config
 
 st.set_page_config(
-    page_title="Mixture-Of-Agents Powered by Groq",
-    page_icon='static/favicon.ico',
-        menu_items={
-        'About': "## Groq Mixture-Of-Agents \n Powered by [Groq](https://groq.com)"
-    },
-    layout="wide"
+    page_title="Mixture-Of-Agents Powered by Groq"
+    # page_icon='static/favicon.ico',
+    #     menu_items={
+    #     'About': "## Groq Mixture-Of-Agents \n Powered by [Groq](https://groq.com)"
+    # },
+    # layout="wide"
 )
 
 valid_model_names = [model.id for model in Groq().models.list().data if not model.id.startswith("whisper")]
 
-st.markdown("<a href='https://groq.com'><img src='app/static/banner.png' width='500'></a>", unsafe_allow_html=True)
-st.write("---")
+# st.markdown("<a href='https://groq.com'><img src='app/static/banner.png' width='500'></a>", unsafe_allow_html=True)
+# st.write("---")
 
 
 
@@ -220,13 +220,13 @@ with st.sidebar:
             except Exception as e:
                 st.error(f"Error updating configuration: {str(e)}")
 
-    st.markdown("---")
-    st.markdown("""
-    ### Credits
-    - MOA: [Together AI](https://www.together.ai/blog/together-moa)
-    - LLMs: [Groq](https://groq.com/)
-    - Paper: [arXiv:2406.04692](https://arxiv.org/abs/2406.04692)
-    """)
+    # st.markdown("---")
+    # st.markdown("""
+    # ### Credits
+    # - MOA: [Together AI](https://www.together.ai/blog/together-moa)
+    # - LLMs: [Groq](https://groq.com/)
+    # - Paper: [arXiv:2406.04692](https://arxiv.org/abs/2406.04692)
+    # """)
 
 # Main app layout
 st.header("Mixture of Agents", anchor=False)
